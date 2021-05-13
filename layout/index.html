@@ -494,7 +494,7 @@
 						</div>
 					</a></div><!-- link-list tablet-hide  --></div><!-- /.repair-types-tab --></div><!-- /.row --></div>
 		<!-- /.wrapper_small --></div><!-- /.repair-types -->
-	<div class="wave-block feedback-block">
+	<div class="wave-block feedback-block" id="wave-block1">
 		<div class="wrapper_feedback">
 			<div class="section-title feedback-block__title mobile-hide tablet-hide">Давайте начнем
 				<span>воплощать вашу мечту о ремонте со встречи?</span>
@@ -751,7 +751,7 @@
 			</div>
 		</div>
 	</div><!-- /transparency -->
-	<div class="wave-block stock">
+	<div class="wave-block stock" id="wave-block2">
 		<div class="wrapper_middle">
 			<div class="stock__title">Акция</div>
 			<div class="stock__descr">Заказывая ремонт от нашего клиента по рекомендации, <strong>скидка 10%!</strong>
@@ -920,7 +920,7 @@
 				<div class="dot__inner"></div>
 			</div>
 		</div><!-- /slider-dots_gray --></div><!-- /reviews -->
-	<div class="wave-block feedback-block">
+	<div class="wave-block feedback-block" id="wave-block3">
 		<div class="wrapper_feedback">
 			<div class="section-title feedback-block__title feedback-block__title_social mobile-hide tablet-hide">Узнайте расчет
 				<span>стоимости ремонта Вашего помещения</span></div>
@@ -1201,21 +1201,17 @@
 				<div class="popup-menu-main">
 					<nav class="popup-menu-nav">
 						<div class="popup-menu-title">Меню</div>
-						<div class="popup-menu-nav__item active_menu"><a class="menu-link" href="#main">главная</a>
-						</div>
+						<div class="popup-menu-nav__item active_menu"><a class="menu-link" href="#main">главная</a></div>
 						<div class="popup-menu-nav__item"><a class="menu-link" href="#formula">преимущества</a></div>
-						<div class="popup-menu-nav__item"><a class="menu-link" href="#repair-types">виды ремонта</a>
-						</div>
-						<div class="popup-menu-nav__item"><a class="menu-link" href="#portfolio">наше портфолио</a>
-						</div>
-						<div class="popup-menu-nav__item">
-							<a class="menu-link" href="#transparency">прозрачность работы</a></div>
-
+						<div class="popup-menu-nav__item"><a class="menu-link" href="#repair-types">виды ремонта</a></div>
+						<div class="popup-menu-nav__item hidden_item_menu"><a href="#wave-block1" hidden></a></div>
+						<div class="popup-menu-nav__item"><a class="menu-link" href="#portfolio">наше портфолио</a></div>
+						<div class="popup-menu-nav__item"><a class="menu-link" href="#transparency">прозрачность работы</a></div>
+						<div class="popup-menu-nav__item hidden_item_menu"><a href="#wave-block2" hidden></a></div>
 						<div class="popup-menu-nav__item"><a class="menu-link" href="#director">об основателе</a></div>
 						<div class="popup-menu-nav__item"><a class="menu-link" href="#reviews">отзывы клиентов</a></div>
-
-						<div class="popup-menu-nav__item"><a class="menu-link" href="#faq">часто задаваемые вопросы</a>
-						</div>
+						<div class="popup-menu-nav__item hidden_item_menu"><a href="#wave-block3" hidden></a></div>
+						<div class="popup-menu-nav__item"><a class="menu-link" href="#faq">часто задаваемые вопросы</a></div>
 						<div class="link-list link-list-menu mobile-hide"><a class="menu-link no-overflow" href="#">
 							<svg width="17" height="16" fill="none" viewBox="0 0 17 16" xmlns="http://www.w3.org/2000/svg">
 								<path
@@ -1287,7 +1283,7 @@
 			</div>
 		</div><!-- /feedback --></div>
 	<div class="popup popup-repair-types">
-		<div class="close mobile-hide">
+		<div class="close mobile-hide close-repair_list">
 			<svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M21.673.327a1.118 1.118 0 0 0-1.581 0L11 9.42 1.909.327A1.118 1.118 0 0 0 .327 1.91L9.42 11 .327 20.091a1.118 1.118 0 1 0 1.582 1.581L11 12.582l9.091 9.09a1.118 1.118 0 1 0 1.581-1.58L12.582 11l9.09-9.091a1.118 1.118 0 0 0 0-1.582z"
 					  fill="#322823" fill-opacity=".5"></path>
@@ -2156,7 +2152,7 @@
 		</div>
 	</div>
 	<div class="popup popup-privacy">
-		<div class="close mobile-hide">
+		<div class="close mobile-hide close-privacy">
 			<svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
 				<path fill-rule="evenodd" clip-rule="evenodd"
 					  d="M21.673.327a1.118 1.118 0 0 0-1.581 0L11 9.42 1.909.327A1.118 1.118 0 0 0 .327 1.91L9.42 11 .327 20.091a1.118 1.118 0 1 0 1.582 1.581L11 12.582l9.091 9.09a1.118 1.118 0 1 0 1.581-1.58L12.582 11l9.09-9.091a1.118 1.118 0 0 0 0-1.582z"
@@ -2213,5 +2209,7 @@
 			</div>
 		</div>
 	</div>
+
+	<script src="../dist/bundle.js"></script>
 </body>
 </html>
