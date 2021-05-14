@@ -1,9 +1,7 @@
 import animate from './animate';
 
 const scrollSlides = () => {
-    const scrollUpBtn = document.querySelector('[href="#main"]');
-    /* const mainHeight = document.querySelector('main').getBoundingClientRect().height; */
-
+    const scrollUpBtn = document.querySelector('.button-footer');
     const menuItem = document.querySelectorAll('.popup-menu-nav__item > a');
 
     let arrHeight = [];
@@ -15,16 +13,12 @@ const scrollSlides = () => {
         item.addEventListener('click', (e) => {
             e.preventDefault();
             animate({
-                duration: 500,
+                duration: 1000,
                 timing: function(timeFraction) {
                 return timeFraction;
                 },
                 draw: function(progress) {
-                    if (document.documentElement.scrollTop === 0){
-                        document.documentElement.scrollTop = progress * (neededHeight - elemHeight);
-                    } else {
-                        window.scrollBy(0, progress * (neededHeight - elemHeight - document.documentElement.scrollTop))
-                    }
+                    window.scrollBy(0, progress * (neededHeight - elemHeight) - document.documentElement.scrollTop)
                 }
             });
         })
