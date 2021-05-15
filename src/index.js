@@ -12,6 +12,7 @@ import portfolioSlider from './modules/portfolioSlider';
 import documentsSlider from './modules/documentsSlider';
 import showConsultation from './modules/showConsultation';
 import reviewsSlider from './modules/reviewsSlider';
+import faqAccordion from './modules/faqAccordion';
 
 
 
@@ -58,4 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //Слайдер документов
     reviewsSlider();
+
+    //ЧаВо аккордеон
+    faqAccordion();
 });
