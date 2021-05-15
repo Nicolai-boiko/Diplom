@@ -51,9 +51,8 @@ const documentsSlider = () => {
     closeTransparencyBtn.addEventListener('click', () => {
         popupTransparency.style.visibility = 'hidden'
     })
-
-    if (document.documentElement.clientWidth <= 1090) {
-        document.querySelector('.transparency-slider').style.flexWrap = 'nowrap'
+    document.querySelector('.transparency-slider').style.flexWrap = 'nowrap'
+    const doDocSlider = () => {
         const docSlider = new SliderCarusel({
             main: '.transparency-slider-wrap',
             wrap: '.transparency-slider',
@@ -64,6 +63,17 @@ const documentsSlider = () => {
         });
         docSlider.init();
     }
+    if (document.documentElement.clientWidth <= 1090) {
+        doDocSlider();
+    }
+    window. addEventListener('resize', () => {
+        if (document.documentElement.clientWidth <= 1090) {
+            doDocSlider();
+        } else {
+            document.querySelectorAll('.transparency-item.glo-slider__item').forEach(item => item.classList.remove('glo-slider__item'));
+        }
+    }) 
+    
 }
 
 
