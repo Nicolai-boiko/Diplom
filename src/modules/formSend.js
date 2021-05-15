@@ -22,7 +22,6 @@ const formSend = () => {
     forms.forEach(form => {
         let input = form.querySelector('input');
         input.addEventListener('focus', () => {
-            console.log(input);
             let checkbox = form.querySelector('.checkbox__input');
             checkbox.style.visibility = 'visible';
             checkbox.style.opacity = '0';

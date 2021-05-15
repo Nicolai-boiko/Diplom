@@ -157,7 +157,7 @@
 							</div>
 						</div>
 					</div><!-- services-item - 4--></div>
-				<button class="button button_wide">Проконсультироваться</button>
+				<button class="button button_wide consultation-btn">Проконсультироваться</button>
 				<div class="feedback">
 					<div class="feedback-wrap">
 						<div class="feedback__icon"><img src="./images/main/feedback_icon.svg" alt="phone"></div>
@@ -811,7 +811,7 @@
 					<div class="director-avatar__descr mobile-hide tablet-hide">Мы с любовью создаем уют для Вашего дома. Получите
 						от меня персональную консультацию!
 					</div>
-					<button class="button button_wide mobile-hide tablet-hide">Проконсультироваться</button>
+					<button class="button button_wide mobile-hide tablet-hide consultation-btn">Проконсультироваться</button>
 				</div>
 				<div class="director-content">
 					<div class="section-title director__title mobile-hide tablet-hide">Эдуард
@@ -838,29 +838,13 @@
 						персональную консультацию!
 					</div>
 				</div>
-				<button class="button button_wide desktop-hide">Проконсультироваться</button>
+				<button class="button button_wide desktop-hide consultation-btn">Проконсультироваться</button>
 			</div>
 		</div>
 	</div><!-- /director -->
 	<div class="reviews" id="reviews">
 		<div class="section-title reviews__title">Мы рады делать <span>клиентов счастливыми</span></div>
 		<div class="reviews-slider-wrap">
-			<div class="slider-arrow slider-arrow_left slider-arrow_left" id="reviews-arrow_left">
-				<svg width="17" height="12" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 12"
-					 preserveAspectRatio="xMinYMin meet">
-					<path
-							d="M.97 5.47a.75.75 0 0 0 0 1.06l4.773 4.773a.75.75 0 1 0 1.06-1.06L2.561 6l4.242-4.243a.75.75 0 0 0-1.06-1.06L.97 5.47zm16.53-.22h-16v1.5h16v-1.5z"
-							fill="#322823"></path>
-				</svg>
-			</div>
-			<div class="slider-arrow slider-arrow_right" id="reviews-arrow_right">
-				<svg width="17" height="12" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 12"
-					 preserveAspectRatio="xMinYMin meet">
-					<path
-							d="M16.03 5.47a.75.75 0 0 1 0 1.06l-4.773 4.773a.75.75 0 0 1-1.06-1.06L14.439 6l-4.242-4.243a.75.75 0 1 1 1.06-1.06L16.03 5.47zM.5 5.25h15v1.5H.5v-1.5z"
-							fill="#322823"></path>
-				</svg>
-			</div>
 			<div class="reviews-slider">
 				<div class="reviews-slider__slide">
 					<div class="reviews-slider__slide-img"><img src="./images/reviews/ava1.jpg" alt=""></div>
@@ -919,6 +903,22 @@
 			<div class="dot dot-reviews switch">
 				<div class="dot__inner"></div>
 			</div>
+		</div>
+		<div class="slider-arrow slider-arrow_left slider-arrow_left" id="reviews-arrow_left">
+			<svg width="17" height="12" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 12"
+				 preserveAspectRatio="xMinYMin meet">
+				<path
+						d="M.97 5.47a.75.75 0 0 0 0 1.06l4.773 4.773a.75.75 0 1 0 1.06-1.06L2.561 6l4.242-4.243a.75.75 0 0 0-1.06-1.06L.97 5.47zm16.53-.22h-16v1.5h16v-1.5z"
+						fill="#322823"></path>
+			</svg>
+		</div>
+		<div class="slider-arrow slider-arrow_right" id="reviews-arrow_right">
+			<svg width="17" height="12" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 12"
+				 preserveAspectRatio="xMinYMin meet">
+				<path
+						d="M16.03 5.47a.75.75 0 0 1 0 1.06l-4.773 4.773a.75.75 0 0 1-1.06-1.06L14.439 6l-4.242-4.243a.75.75 0 1 1 1.06-1.06L16.03 5.47zM.5 5.25h15v1.5H.5v-1.5z"
+						fill="#322823"></path>
+			</svg>
 		</div><!-- /slider-dots_gray --></div><!-- /reviews -->
 	<div class="wave-block feedback-block" id="wave-block3">
 		<div class="wrapper_feedback">
@@ -1697,7 +1697,7 @@
 				</div><!-- /popup-repair-types-tab --></div><!-- /.row --></div><!-- /popup-dialog --></div>
 	<!-- /popup popup-repair-types -->
 	<div class="popup popup-portfolio">
-		<div class="close mobile-hide">
+		<div class="close mobile-hide close-portfolio">
 			<svg width="22" height="22" fill="none" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
 				<path fill-rule="evenodd" clip-rule="evenodd"
 					  d="M21.673.327a1.118 1.118 0 0 0-1.581 0L11 9.42 1.909.327A1.118 1.118 0 0 0 .327 1.91L9.42 11 .327 20.091a1.118 1.118 0 1 0 1.582 1.581L11 12.582l9.091 9.09a1.118 1.118 0 1 0 1.581-1.58L12.582 11l9.09-9.091a1.118 1.118 0 0 0 0-1.582z"
@@ -1707,7 +1707,7 @@
 		<div class="popup-dialog popup-dialog-portfolio">
 			<div class="row">
 				<div class="popup-portfolio-slider-wrap">
-					<div class="close tablet-hide desktop-hide">
+					<div class="close tablet-hide desktop-hide close-portfolio_mob">
 						<svg width="22" height="22" fill="none" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd"
 								  d="M21.673.327a1.118 1.118 0 0 0-1.581 0L11 9.42 1.909.327A1.118 1.118 0 0 0 .327 1.91L9.42 11 .327 20.091a1.118 1.118 0 1 0 1.582 1.581L11 12.582l9.091 9.09a1.118 1.118 0 1 0 1.581-1.58L12.582 11l9.09-9.091a1.118 1.118 0 0 0 0-1.582z"
@@ -1747,360 +1747,363 @@
 						</svg>
 					</div>
 				</div>
-				<div class="popup-portfolio-text">
-					<div class="popup-portfolio-text-important">
-						<div class="popup-portfolio-text-wrap">
-							<div class="popup-portfolio-text__title">Площадь квартиры</div>
-							<div class="popup-portfolio-text__value_big">64<span> м<sup>2</sup></span></div>
+				<div class="popup-portfolio-text_wrapper_custom">
+					<div class="popup-portfolio-text">
+						<div class="popup-portfolio-text-important">
+							<div class="popup-portfolio-text-wrap">
+								<div class="popup-portfolio-text__title">Площадь квартиры</div>
+								<div class="popup-portfolio-text__value_big">64<span> м<sup>2</sup></span></div>
+							</div>
+							<div class="popup-portfolio-text-wrap">
+								<div class="popup-portfolio-text__title">Срок<br>ремонта</div>
+								<div class="popup-portfolio-text__value_big">51<span> дней</span></div>
+							</div>
 						</div>
-						<div class="popup-portfolio-text-wrap">
-							<div class="popup-portfolio-text__title">Срок<br>ремонта</div>
-							<div class="popup-portfolio-text__value_big">51<span> дней</span></div>
+						<div class="popup-portfolio-text-price">
+							<div>
+								<div class="popup-portfolio-text__title">Вид ремонта</div>
+								<div class="popup-portfolio-text__value">Косметический</div>
+							</div>
+							<div>
+								<div class="popup-portfolio-text__title">Стоимость работ</div>
+								<div class="popup-portfolio-text__value">111 000 &#8381;</div>
+							</div>
+							<div>
+								<div class="popup-portfolio-text__title">Стоимость материалов</div>
+								<div class="popup-portfolio-text__value">129 000 &#8381;</div>
+							</div>
+						</div><!-- /popup-portfolio-text-price -->
+						<div class="popup-portfolio-text-authors">
+							<div>
+								<div class="popup-portfolio-text__title">Общая стоимость ремонта</div>
+								<div class="popup-portfolio-text__value">240 000 &#8381;</div>
+							</div>
+							<div class="popup-portfolio-text__title">Прораб: <strong>Петренко А.В.</strong></div>
+							<div class="popup-portfolio-text__title">Руководитель проекта:</div>
+							<div class="popup-portfolio-text__title"><strong>Тюленев Э.Н.</strong></div>
+						</div>
+					</div><!-- /popup-portfolio-text -->
+					<div class="popup-portfolio-text">
+						<div class="popup-portfolio-text-important">
+							<div class="popup-portfolio-text-wrap">
+								<div class="popup-portfolio-text__title">Площадь квартиры</div>
+								<div class="popup-portfolio-text__value_big">97<span> м<sup>2</sup></span></div>
+							</div>
+							<div class="popup-portfolio-text-wrap">
+								<div class="popup-portfolio-text__title">Срок<br>ремонта</div>
+								<div class="popup-portfolio-text__value_big">98<span> дней</span></div>
+							</div>
+						</div>
+						<div class="popup-portfolio-text-price">
+							<div>
+								<div class="popup-portfolio-text__title">Вид ремонта</div>
+								<div class="popup-portfolio-text__value">Евроремонт</div>
+							</div>
+							<div>
+								<div class="popup-portfolio-text__title">Стоимость работ</div>
+								<div class="popup-portfolio-text__value">200 500 &#8381;</div>
+							</div>
+							<div>
+								<div class="popup-portfolio-text__title">Стоимость материалов</div>
+								<div class="popup-portfolio-text__value">135 900 &#8381;</div>
+							</div>
+						</div><!-- /popup-portfolio-text-price -->
+						<div class="popup-portfolio-text-authors">
+							<div>
+								<div class="popup-portfolio-text__title">Общая стоимость ремонта</div>
+								<div class="popup-portfolio-text__value">346 400 &#8381;</div>
+							</div>
+							<div class="popup-portfolio-text__title">Прораб: <strong>Петренко А.В.</strong></div>
+							<div class="popup-portfolio-text__title">Руководитель проекта:</div>
+							<div class="popup-portfolio-text__title"><strong>Тюленев Э.Н.</strong></div>
 						</div>
 					</div>
-					<div class="popup-portfolio-text-price">
-						<div>
-							<div class="popup-portfolio-text__title">Вид ремонта</div>
-							<div class="popup-portfolio-text__value">Косметический</div>
+					<div class="popup-portfolio-text">
+						<div class="popup-portfolio-text-important">
+							<div class="popup-portfolio-text-wrap">
+								<div class="popup-portfolio-text__title">Площадь квартиры</div>
+								<div class="popup-portfolio-text__value_big">56<span> м<sup>2</sup></span></div>
+							</div>
+							<div class="popup-portfolio-text-wrap">
+								<div class="popup-portfolio-text__title">Срок<br>ремонта</div>
+								<div class="popup-portfolio-text__value_big">54<span> дней</span></div>
+							</div>
 						</div>
-						<div>
-							<div class="popup-portfolio-text__title">Стоимость работ</div>
-							<div class="popup-portfolio-text__value">111 000 &#8381;</div>
+						<div class="popup-portfolio-text-price">
+							<div>
+								<div class="popup-portfolio-text__title">Вид ремонта</div>
+								<div class="popup-portfolio-text__value">Косметический</div>
+							</div>
+							<div>
+								<div class="popup-portfolio-text__title">Стоимость работ</div>
+								<div class="popup-portfolio-text__value">120 000 &#8381;</div>
+							</div>
+							<div>
+								<div class="popup-portfolio-text__title">Стоимость материалов</div>
+								<div class="popup-portfolio-text__value">180 000 &#8381;</div>
+							</div>
+						</div><!-- /popup-portfolio-text-price -->
+						<div class="popup-portfolio-text-authors">
+							<div>
+								<div class="popup-portfolio-text__title">Общая стоимость ремонта</div>
+								<div class="popup-portfolio-text__value">300 000 &#8381;</div>
+							</div>
+							<div class="popup-portfolio-text__title">Прораб: <strong>Петренко А.В.</strong></div>
+							<div class="popup-portfolio-text__title">Руководитель проекта:</div>
+							<div class="popup-portfolio-text__title"><strong>Тюленев Э.Н.</strong></div>
 						</div>
-						<div>
-							<div class="popup-portfolio-text__title">Стоимость материалов</div>
-							<div class="popup-portfolio-text__value">129 000 &#8381;</div>
+					</div><!-- /popup-portfolio-text -->
+					<div class="popup-portfolio-text">
+						<div class="popup-portfolio-text-important">
+							<div class="popup-portfolio-text-wrap">
+								<div class="popup-portfolio-text__title">Площадь квартиры</div>
+								<div class="popup-portfolio-text__value_big">102<span> м<sup>2</sup></span></div>
+							</div>
+							<div class="popup-portfolio-text-wrap">
+								<div class="popup-portfolio-text__title">Срок<br>ремонта</div>
+								<div class="popup-portfolio-text__value_big">99<span> дней</span></div>
+							</div>
 						</div>
-					</div><!-- /popup-portfolio-text-price -->
-					<div class="popup-portfolio-text-authors">
-						<div>
-							<div class="popup-portfolio-text__title">Общая стоимость ремонта</div>
-							<div class="popup-portfolio-text__value">240 000 &#8381;</div>
+						<div class="popup-portfolio-text-price">
+							<div>
+								<div class="popup-portfolio-text__title">Вид ремонта</div>
+								<div class="popup-portfolio-text__value">Евроремонт</div>
+							</div>
+							<div>
+								<div class="popup-portfolio-text__title">Стоимость работ</div>
+								<div class="popup-portfolio-text__value">200 500 &#8381;</div>
+							</div>
+							<div>
+								<div class="popup-portfolio-text__title">Стоимость материалов</div>
+								<div class="popup-portfolio-text__value">185 900 &#8381;</div>
+							</div>
+						</div><!-- /popup-portfolio-text-price -->
+						<div class="popup-portfolio-text-authors">
+							<div>
+								<div class="popup-portfolio-text__title">Общая стоимость ремонта</div>
+								<div class="popup-portfolio-text__value">386 400 &#8381;</div>
+							</div>
+							<div class="popup-portfolio-text__title">Прораб: <strong>Петренко А.В.</strong></div>
+							<div class="popup-portfolio-text__title">Руководитель проекта:</div>
+							<div class="popup-portfolio-text__title"><strong>Тюленев Э.Н.</strong></div>
 						</div>
-						<div class="popup-portfolio-text__title">Прораб: <strong>Петренко А.В.</strong></div>
-						<div class="popup-portfolio-text__title">Руководитель проекта:</div>
-						<div class="popup-portfolio-text__title"><strong>Тюленев Э.Н.</strong></div>
-					</div>
-				</div><!-- /popup-portfolio-text -->
-				<div class="popup-portfolio-text">
-					<div class="popup-portfolio-text-important">
-						<div class="popup-portfolio-text-wrap">
-							<div class="popup-portfolio-text__title">Площадь квартиры</div>
-							<div class="popup-portfolio-text__value_big">97<span> м<sup>2</sup></span></div>
+					</div><!-- /popup-portfolio-text -->
+					<div class="popup-portfolio-text">
+						<div class="popup-portfolio-text-important">
+							<div class="popup-portfolio-text-wrap">
+								<div class="popup-portfolio-text__title">Площадь квартиры</div>
+								<div class="popup-portfolio-text__value_big">82<span> м<sup>2</sup></span></div>
+							</div>
+							<div class="popup-portfolio-text-wrap">
+								<div class="popup-portfolio-text__title">Срок<br>ремонта</div>
+								<div class="popup-portfolio-text__value_big">90<span> дней</span></div>
+							</div>
 						</div>
-						<div class="popup-portfolio-text-wrap">
-							<div class="popup-portfolio-text__title">Срок<br>ремонта</div>
-							<div class="popup-portfolio-text__value_big">98<span> дней</span></div>
+						<div class="popup-portfolio-text-price">
+							<div>
+								<div class="popup-portfolio-text__title">Вид ремонта</div>
+								<div class="popup-portfolio-text__value">Индивидуальный</div>
+							</div>
+							<div>
+								<div class="popup-portfolio-text__title">Стоимость работ</div>
+								<div class="popup-portfolio-text__value">200 500 &#8381;</div>
+							</div>
+							<div>
+								<div class="popup-portfolio-text__title">Стоимость материалов</div>
+								<div class="popup-portfolio-text__value">185 900 &#8381;</div>
+							</div>
+						</div><!-- /popup-portfolio-text-price -->
+						<div class="popup-portfolio-text-authors">
+							<div>
+								<div class="popup-portfolio-text__title">Общая стоимость ремонта</div>
+								<div class="popup-portfolio-text__value">386 400 &#8381;</div>
+							</div>
+							<div class="popup-portfolio-text__title">Прораб: <strong>Петренко А.В.</strong></div>
+							<div class="popup-portfolio-text__title">Руководитель проекта:</div>
+							<div class="popup-portfolio-text__title"><strong>Тюленев Э.Н.</strong></div>
 						</div>
-					</div>
-					<div class="popup-portfolio-text-price">
-						<div>
-							<div class="popup-portfolio-text__title">Вид ремонта</div>
-							<div class="popup-portfolio-text__value">Евроремонт</div>
+					</div><!-- /popup-portfolio-text -->
+					<div class="popup-portfolio-text">
+						<div class="popup-portfolio-text-important">
+							<div class="popup-portfolio-text-wrap">
+								<div class="popup-portfolio-text__title">Площадь квартиры</div>
+								<div class="popup-portfolio-text__value_big">82<span> м<sup>2</sup></span></div>
+							</div>
+							<div class="popup-portfolio-text-wrap">
+								<div class="popup-portfolio-text__title">Срок<br>ремонта</div>
+								<div class="popup-portfolio-text__value_big">90<span> дней</span></div>
+							</div>
 						</div>
-						<div>
-							<div class="popup-portfolio-text__title">Стоимость работ</div>
-							<div class="popup-portfolio-text__value">200 500 &#8381;</div>
+						<div class="popup-portfolio-text-price">
+							<div>
+								<div class="popup-portfolio-text__title">Вид ремонта</div>
+								<div class="popup-portfolio-text__value">Индивидуальный</div>
+							</div>
+							<div>
+								<div class="popup-portfolio-text__title">Стоимость работ</div>
+								<div class="popup-portfolio-text__value">200 500 &#8381;</div>
+							</div>
+							<div>
+								<div class="popup-portfolio-text__title">Стоимость материалов</div>
+								<div class="popup-portfolio-text__value">185 900 &#8381;</div>
+							</div>
+						</div><!-- /popup-portfolio-text-price -->
+						<div class="popup-portfolio-text-authors">
+							<div>
+								<div class="popup-portfolio-text__title">Общая стоимость ремонта</div>
+								<div class="popup-portfolio-text__value">386 400 &#8381;</div>
+							</div>
+							<div class="popup-portfolio-text__title">Прораб: <strong>Петренко А.В.</strong></div>
+							<div class="popup-portfolio-text__title">Руководитель проекта:</div>
+							<div class="popup-portfolio-text__title"><strong>Тюленев Э.Н.</strong></div>
 						</div>
-						<div>
-							<div class="popup-portfolio-text__title">Стоимость материалов</div>
-							<div class="popup-portfolio-text__value">135 900 &#8381;</div>
+					</div><!-- /popup-portfolio-text -->
+					<div class="popup-portfolio-text">
+						<div class="popup-portfolio-text-important">
+							<div class="popup-portfolio-text-wrap">
+								<div class="popup-portfolio-text__title">Площадь квартиры</div>
+								<div class="popup-portfolio-text__value_big">87<span> м<sup>2</sup></span></div>
+							</div>
+							<div class="popup-portfolio-text-wrap">
+								<div class="popup-portfolio-text__title">Срок<br>ремонта</div>
+								<div class="popup-portfolio-text__value_big">74<span> дней</span></div>
+							</div>
 						</div>
-					</div><!-- /popup-portfolio-text-price -->
-					<div class="popup-portfolio-text-authors">
-						<div>
-							<div class="popup-portfolio-text__title">Общая стоимость ремонта</div>
-							<div class="popup-portfolio-text__value">346 400 &#8381;</div>
+						<div class="popup-portfolio-text-price">
+							<div>
+								<div class="popup-portfolio-text__title">Вид ремонта</div>
+								<div class="popup-portfolio-text__value">Евроремонт</div>
+							</div>
+							<div>
+								<div class="popup-portfolio-text__title">Стоимость работ</div>
+								<div class="popup-portfolio-text__value">200 500 &#8381;</div>
+							</div>
+							<div>
+								<div class="popup-portfolio-text__title">Стоимость материалов</div>
+								<div class="popup-portfolio-text__value">185 900 &#8381;</div>
+							</div>
+						</div><!-- /popup-portfolio-text-price -->
+						<div class="popup-portfolio-text-authors">
+							<div>
+								<div class="popup-portfolio-text__title">Общая стоимость ремонта</div>
+								<div class="popup-portfolio-text__value">386 400 &#8381;</div>
+							</div>
+							<div class="popup-portfolio-text__title">Прораб: <strong>Петренко А.В.</strong></div>
+							<div class="popup-portfolio-text__title">Руководитель проекта:</div>
+							<div class="popup-portfolio-text__title"><strong>Тюленев Э.Н.</strong></div>
 						</div>
-						<div class="popup-portfolio-text__title">Прораб: <strong>Петренко А.В.</strong></div>
-						<div class="popup-portfolio-text__title">Руководитель проекта:</div>
-						<div class="popup-portfolio-text__title"><strong>Тюленев Э.Н.</strong></div>
+					</div><!-- /popup-portfolio-text -->
+					<div class="popup-portfolio-text">
+						<div class="popup-portfolio-text-important">
+							<div class="popup-portfolio-text-wrap">
+								<div class="popup-portfolio-text__title">Площадь квартиры</div>
+								<div class="popup-portfolio-text__value_big">56<span> м<sup>2</sup></span></div>
+							</div>
+							<div class="popup-portfolio-text-wrap">
+								<div class="popup-portfolio-text__title">Срок<br>ремонта</div>
+								<div class="popup-portfolio-text__value_big">54<span> дней</span></div>
+							</div>
+						</div>
+						<div class="popup-portfolio-text-price">
+							<div>
+								<div class="popup-portfolio-text__title">Вид ремонта</div>
+								<div class="popup-portfolio-text__value">Косметический</div>
+							</div>
+							<div>
+								<div class="popup-portfolio-text__title">Стоимость работ</div>
+								<div class="popup-portfolio-text__value">120 000 &#8381;</div>
+							</div>
+							<div>
+								<div class="popup-portfolio-text__title">Стоимость материалов</div>
+								<div class="popup-portfolio-text__value">180 000 &#8381;</div>
+							</div>
+						</div><!-- /popup-portfolio-text-price -->
+						<div class="popup-portfolio-text-authors">
+							<div>
+								<div class="popup-portfolio-text__title">Общая стоимость ремонта</div>
+								<div class="popup-portfolio-text__value">300 000 &#8381;</div>
+							</div>
+							<div class="popup-portfolio-text__title">Прораб: <strong>Петренко А.В.</strong></div>
+							<div class="popup-portfolio-text__title">Руководитель проекта:</div>
+							<div class="popup-portfolio-text__title"><strong>Тюленев Э.Н.</strong></div>
+						</div>
+					</div><!-- /popup-portfolio-text -->
+					<div class="popup-portfolio-text">
+						<div class="popup-portfolio-text-important">
+							<div class="popup-portfolio-text-wrap">
+								<div class="popup-portfolio-text__title">Площадь квартиры</div>
+								<div class="popup-portfolio-text__value_big">102<span> м<sup>2</sup></span></div>
+							</div>
+							<div class="popup-portfolio-text-wrap">
+								<div class="popup-portfolio-text__title">Срок<br>ремонта</div>
+								<div class="popup-portfolio-text__value_big">99<span> дней</span></div>
+							</div>
+						</div>
+						<div class="popup-portfolio-text-price">
+							<div>
+								<div class="popup-portfolio-text__title">Вид ремонта</div>
+								<div class="popup-portfolio-text__value">Евроремонт</div>
+							</div>
+							<div>
+								<div class="popup-portfolio-text__title">Стоимость работ</div>
+								<div class="popup-portfolio-text__value">200 500 &#8381;</div>
+							</div>
+							<div>
+								<div class="popup-portfolio-text__title">Стоимость материалов</div>
+								<div class="popup-portfolio-text__value">185 900 &#8381;</div>
+							</div>
+						</div><!-- /popup-portfolio-text-price -->
+						<div class="popup-portfolio-text-authors">
+							<div>
+								<div class="popup-portfolio-text__title">Общая стоимость ремонта</div>
+								<div class="popup-portfolio-text__value">386 400 &#8381;</div>
+							</div>
+							<div class="popup-portfolio-text__title">Прораб: <strong>Петренко А.В.</strong></div>
+							<div class="popup-portfolio-text__title">Руководитель проекта:</div>
+							<div class="popup-portfolio-text__title"><strong>Тюленев Э.Н.</strong></div>
+						</div>
+					</div><!-- /popup-portfolio-text -->
+					<div class="popup-portfolio-text">
+						<div class="popup-portfolio-text-important">
+							<div class="popup-portfolio-text-wrap">
+								<div class="popup-portfolio-text__title">Площадь квартиры</div>
+								<div class="popup-portfolio-text__value_big">82<span> м<sup>2</sup></span></div>
+							</div>
+							<div class="popup-portfolio-text-wrap">
+								<div class="popup-portfolio-text__title">Срок<br>ремонта</div>
+								<div class="popup-portfolio-text__value_big">90<span> дней</span></div>
+							</div>
+						</div>
+						<div class="popup-portfolio-text-price">
+							<div>
+								<div class="popup-portfolio-text__title">Вид ремонта</div>
+								<div class="popup-portfolio-text__value">Индивидуальный</div>
+							</div>
+							<div>
+								<div class="popup-portfolio-text__title">Стоимость работ</div>
+								<div class="popup-portfolio-text__value">200 500 &#8381;</div>
+							</div>
+							<div>
+								<div class="popup-portfolio-text__title">Стоимость материалов</div>
+								<div class="popup-portfolio-text__value">185 900 &#8381;</div>
+							</div>
+						</div><!-- /popup-portfolio-text-price -->
+						<div class="popup-portfolio-text-authors">
+							<div>
+								<div class="popup-portfolio-text__title">Общая стоимость ремонта</div>
+								<div class="popup-portfolio-text__value">386 400 &#8381;</div>
+							</div>
+							<div class="popup-portfolio-text__title">Прораб: <strong>Петренко А.В.</strong></div>
+							<div class="popup-portfolio-text__title">Руководитель проекта:</div>
+							<div class="popup-portfolio-text__title"><strong>Тюленев Э.Н.</strong></div>
+						</div>
 					</div>
 				</div>
-				<div class="popup-portfolio-text">
-					<div class="popup-portfolio-text-important">
-						<div class="popup-portfolio-text-wrap">
-							<div class="popup-portfolio-text__title">Площадь квартиры</div>
-							<div class="popup-portfolio-text__value_big">56<span> м<sup>2</sup></span></div>
-						</div>
-						<div class="popup-portfolio-text-wrap">
-							<div class="popup-portfolio-text__title">Срок<br>ремонта</div>
-							<div class="popup-portfolio-text__value_big">54<span> дней</span></div>
-						</div>
-					</div>
-					<div class="popup-portfolio-text-price">
-						<div>
-							<div class="popup-portfolio-text__title">Вид ремонта</div>
-							<div class="popup-portfolio-text__value">Косметический</div>
-						</div>
-						<div>
-							<div class="popup-portfolio-text__title">Стоимость работ</div>
-							<div class="popup-portfolio-text__value">120 000 &#8381;</div>
-						</div>
-						<div>
-							<div class="popup-portfolio-text__title">Стоимость материалов</div>
-							<div class="popup-portfolio-text__value">180 000 &#8381;</div>
-						</div>
-					</div><!-- /popup-portfolio-text-price -->
-					<div class="popup-portfolio-text-authors">
-						<div>
-							<div class="popup-portfolio-text__title">Общая стоимость ремонта</div>
-							<div class="popup-portfolio-text__value">300 000 &#8381;</div>
-						</div>
-						<div class="popup-portfolio-text__title">Прораб: <strong>Петренко А.В.</strong></div>
-						<div class="popup-portfolio-text__title">Руководитель проекта:</div>
-						<div class="popup-portfolio-text__title"><strong>Тюленев Э.Н.</strong></div>
-					</div>
-				</div><!-- /popup-portfolio-text -->
-				<div class="popup-portfolio-text">
-					<div class="popup-portfolio-text-important">
-						<div class="popup-portfolio-text-wrap">
-							<div class="popup-portfolio-text__title">Площадь квартиры</div>
-							<div class="popup-portfolio-text__value_big">102<span> м<sup>2</sup></span></div>
-						</div>
-						<div class="popup-portfolio-text-wrap">
-							<div class="popup-portfolio-text__title">Срок<br>ремонта</div>
-							<div class="popup-portfolio-text__value_big">99<span> дней</span></div>
-						</div>
-					</div>
-					<div class="popup-portfolio-text-price">
-						<div>
-							<div class="popup-portfolio-text__title">Вид ремонта</div>
-							<div class="popup-portfolio-text__value">Евроремонт</div>
-						</div>
-						<div>
-							<div class="popup-portfolio-text__title">Стоимость работ</div>
-							<div class="popup-portfolio-text__value">200 500 &#8381;</div>
-						</div>
-						<div>
-							<div class="popup-portfolio-text__title">Стоимость материалов</div>
-							<div class="popup-portfolio-text__value">185 900 &#8381;</div>
-						</div>
-					</div><!-- /popup-portfolio-text-price -->
-					<div class="popup-portfolio-text-authors">
-						<div>
-							<div class="popup-portfolio-text__title">Общая стоимость ремонта</div>
-							<div class="popup-portfolio-text__value">386 400 &#8381;</div>
-						</div>
-						<div class="popup-portfolio-text__title">Прораб: <strong>Петренко А.В.</strong></div>
-						<div class="popup-portfolio-text__title">Руководитель проекта:</div>
-						<div class="popup-portfolio-text__title"><strong>Тюленев Э.Н.</strong></div>
-					</div>
-				</div><!-- /popup-portfolio-text -->
-				<div class="popup-portfolio-text">
-					<div class="popup-portfolio-text-important">
-						<div class="popup-portfolio-text-wrap">
-							<div class="popup-portfolio-text__title">Площадь квартиры</div>
-							<div class="popup-portfolio-text__value_big">82<span> м<sup>2</sup></span></div>
-						</div>
-						<div class="popup-portfolio-text-wrap">
-							<div class="popup-portfolio-text__title">Срок<br>ремонта</div>
-							<div class="popup-portfolio-text__value_big">90<span> дней</span></div>
-						</div>
-					</div>
-					<div class="popup-portfolio-text-price">
-						<div>
-							<div class="popup-portfolio-text__title">Вид ремонта</div>
-							<div class="popup-portfolio-text__value">Индивидуальный</div>
-						</div>
-						<div>
-							<div class="popup-portfolio-text__title">Стоимость работ</div>
-							<div class="popup-portfolio-text__value">200 500 &#8381;</div>
-						</div>
-						<div>
-							<div class="popup-portfolio-text__title">Стоимость материалов</div>
-							<div class="popup-portfolio-text__value">185 900 &#8381;</div>
-						</div>
-					</div><!-- /popup-portfolio-text-price -->
-					<div class="popup-portfolio-text-authors">
-						<div>
-							<div class="popup-portfolio-text__title">Общая стоимость ремонта</div>
-							<div class="popup-portfolio-text__value">386 400 &#8381;</div>
-						</div>
-						<div class="popup-portfolio-text__title">Прораб: <strong>Петренко А.В.</strong></div>
-						<div class="popup-portfolio-text__title">Руководитель проекта:</div>
-						<div class="popup-portfolio-text__title"><strong>Тюленев Э.Н.</strong></div>
-					</div>
-				</div><!-- /popup-portfolio-text -->
-				<div class="popup-portfolio-text">
-					<div class="popup-portfolio-text-important">
-						<div class="popup-portfolio-text-wrap">
-							<div class="popup-portfolio-text__title">Площадь квартиры</div>
-							<div class="popup-portfolio-text__value_big">82<span> м<sup>2</sup></span></div>
-						</div>
-						<div class="popup-portfolio-text-wrap">
-							<div class="popup-portfolio-text__title">Срок<br>ремонта</div>
-							<div class="popup-portfolio-text__value_big">90<span> дней</span></div>
-						</div>
-					</div>
-					<div class="popup-portfolio-text-price">
-						<div>
-							<div class="popup-portfolio-text__title">Вид ремонта</div>
-							<div class="popup-portfolio-text__value">Индивидуальный</div>
-						</div>
-						<div>
-							<div class="popup-portfolio-text__title">Стоимость работ</div>
-							<div class="popup-portfolio-text__value">200 500 &#8381;</div>
-						</div>
-						<div>
-							<div class="popup-portfolio-text__title">Стоимость материалов</div>
-							<div class="popup-portfolio-text__value">185 900 &#8381;</div>
-						</div>
-					</div><!-- /popup-portfolio-text-price -->
-					<div class="popup-portfolio-text-authors">
-						<div>
-							<div class="popup-portfolio-text__title">Общая стоимость ремонта</div>
-							<div class="popup-portfolio-text__value">386 400 &#8381;</div>
-						</div>
-						<div class="popup-portfolio-text__title">Прораб: <strong>Петренко А.В.</strong></div>
-						<div class="popup-portfolio-text__title">Руководитель проекта:</div>
-						<div class="popup-portfolio-text__title"><strong>Тюленев Э.Н.</strong></div>
-					</div>
-				</div><!-- /popup-portfolio-text -->
-				<div class="popup-portfolio-text">
-					<div class="popup-portfolio-text-important">
-						<div class="popup-portfolio-text-wrap">
-							<div class="popup-portfolio-text__title">Площадь квартиры</div>
-							<div class="popup-portfolio-text__value_big">87<span> м<sup>2</sup></span></div>
-						</div>
-						<div class="popup-portfolio-text-wrap">
-							<div class="popup-portfolio-text__title">Срок<br>ремонта</div>
-							<div class="popup-portfolio-text__value_big">74<span> дней</span></div>
-						</div>
-					</div>
-					<div class="popup-portfolio-text-price">
-						<div>
-							<div class="popup-portfolio-text__title">Вид ремонта</div>
-							<div class="popup-portfolio-text__value">Евроремонт</div>
-						</div>
-						<div>
-							<div class="popup-portfolio-text__title">Стоимость работ</div>
-							<div class="popup-portfolio-text__value">200 500 &#8381;</div>
-						</div>
-						<div>
-							<div class="popup-portfolio-text__title">Стоимость материалов</div>
-							<div class="popup-portfolio-text__value">185 900 &#8381;</div>
-						</div>
-					</div><!-- /popup-portfolio-text-price -->
-					<div class="popup-portfolio-text-authors">
-						<div>
-							<div class="popup-portfolio-text__title">Общая стоимость ремонта</div>
-							<div class="popup-portfolio-text__value">386 400 &#8381;</div>
-						</div>
-						<div class="popup-portfolio-text__title">Прораб: <strong>Петренко А.В.</strong></div>
-						<div class="popup-portfolio-text__title">Руководитель проекта:</div>
-						<div class="popup-portfolio-text__title"><strong>Тюленев Э.Н.</strong></div>
-					</div>
-				</div><!-- /popup-portfolio-text -->
-				<div class="popup-portfolio-text">
-					<div class="popup-portfolio-text-important">
-						<div class="popup-portfolio-text-wrap">
-							<div class="popup-portfolio-text__title">Площадь квартиры</div>
-							<div class="popup-portfolio-text__value_big">56<span> м<sup>2</sup></span></div>
-						</div>
-						<div class="popup-portfolio-text-wrap">
-							<div class="popup-portfolio-text__title">Срок<br>ремонта</div>
-							<div class="popup-portfolio-text__value_big">54<span> дней</span></div>
-						</div>
-					</div>
-					<div class="popup-portfolio-text-price">
-						<div>
-							<div class="popup-portfolio-text__title">Вид ремонта</div>
-							<div class="popup-portfolio-text__value">Косметический</div>
-						</div>
-						<div>
-							<div class="popup-portfolio-text__title">Стоимость работ</div>
-							<div class="popup-portfolio-text__value">120 000 &#8381;</div>
-						</div>
-						<div>
-							<div class="popup-portfolio-text__title">Стоимость материалов</div>
-							<div class="popup-portfolio-text__value">180 000 &#8381;</div>
-						</div>
-					</div><!-- /popup-portfolio-text-price -->
-					<div class="popup-portfolio-text-authors">
-						<div>
-							<div class="popup-portfolio-text__title">Общая стоимость ремонта</div>
-							<div class="popup-portfolio-text__value">300 000 &#8381;</div>
-						</div>
-						<div class="popup-portfolio-text__title">Прораб: <strong>Петренко А.В.</strong></div>
-						<div class="popup-portfolio-text__title">Руководитель проекта:</div>
-						<div class="popup-portfolio-text__title"><strong>Тюленев Э.Н.</strong></div>
-					</div>
-				</div><!-- /popup-portfolio-text -->
-				<div class="popup-portfolio-text">
-					<div class="popup-portfolio-text-important">
-						<div class="popup-portfolio-text-wrap">
-							<div class="popup-portfolio-text__title">Площадь квартиры</div>
-							<div class="popup-portfolio-text__value_big">102<span> м<sup>2</sup></span></div>
-						</div>
-						<div class="popup-portfolio-text-wrap">
-							<div class="popup-portfolio-text__title">Срок<br>ремонта</div>
-							<div class="popup-portfolio-text__value_big">99<span> дней</span></div>
-						</div>
-					</div>
-					<div class="popup-portfolio-text-price">
-						<div>
-							<div class="popup-portfolio-text__title">Вид ремонта</div>
-							<div class="popup-portfolio-text__value">Евроремонт</div>
-						</div>
-						<div>
-							<div class="popup-portfolio-text__title">Стоимость работ</div>
-							<div class="popup-portfolio-text__value">200 500 &#8381;</div>
-						</div>
-						<div>
-							<div class="popup-portfolio-text__title">Стоимость материалов</div>
-							<div class="popup-portfolio-text__value">185 900 &#8381;</div>
-						</div>
-					</div><!-- /popup-portfolio-text-price -->
-					<div class="popup-portfolio-text-authors">
-						<div>
-							<div class="popup-portfolio-text__title">Общая стоимость ремонта</div>
-							<div class="popup-portfolio-text__value">386 400 &#8381;</div>
-						</div>
-						<div class="popup-portfolio-text__title">Прораб: <strong>Петренко А.В.</strong></div>
-						<div class="popup-portfolio-text__title">Руководитель проекта:</div>
-						<div class="popup-portfolio-text__title"><strong>Тюленев Э.Н.</strong></div>
-					</div>
-				</div><!-- /popup-portfolio-text -->
-				<div class="popup-portfolio-text">
-					<div class="popup-portfolio-text-important">
-						<div class="popup-portfolio-text-wrap">
-							<div class="popup-portfolio-text__title">Площадь квартиры</div>
-							<div class="popup-portfolio-text__value_big">82<span> м<sup>2</sup></span></div>
-						</div>
-						<div class="popup-portfolio-text-wrap">
-							<div class="popup-portfolio-text__title">Срок<br>ремонта</div>
-							<div class="popup-portfolio-text__value_big">90<span> дней</span></div>
-						</div>
-					</div>
-					<div class="popup-portfolio-text-price">
-						<div>
-							<div class="popup-portfolio-text__title">Вид ремонта</div>
-							<div class="popup-portfolio-text__value">Индивидуальный</div>
-						</div>
-						<div>
-							<div class="popup-portfolio-text__title">Стоимость работ</div>
-							<div class="popup-portfolio-text__value">200 500 &#8381;</div>
-						</div>
-						<div>
-							<div class="popup-portfolio-text__title">Стоимость материалов</div>
-							<div class="popup-portfolio-text__value">185 900 &#8381;</div>
-						</div>
-					</div><!-- /popup-portfolio-text-price -->
-					<div class="popup-portfolio-text-authors">
-						<div>
-							<div class="popup-portfolio-text__title">Общая стоимость ремонта</div>
-							<div class="popup-portfolio-text__value">386 400 &#8381;</div>
-						</div>
-						<div class="popup-portfolio-text__title">Прораб: <strong>Петренко А.В.</strong></div>
-						<div class="popup-portfolio-text__title">Руководитель проекта:</div>
-						<div class="popup-portfolio-text__title"><strong>Тюленев Э.Н.</strong></div>
-					</div>
-				</div><!-- /popup-portfolio-text --></div>
+				<!-- /popup-portfolio-text --></div>
 		</div>
 	</div><!-- /popup-portfolio -->
 	<div class="popup popup-transparency">
-		<div class="close mobile-hide">
+		<div class="close mobile-hide close-transparency">
 			<svg width="22" height="22" fill="none" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
 				<path fill-rule="evenodd" clip-rule="evenodd"
 					  d="M21.673.327a1.118 1.118 0 0 0-1.581 0L11 9.42 1.909.327A1.118 1.118 0 0 0 .327 1.91L9.42 11 .327 20.091a1.118 1.118 0 1 0 1.582 1.581L11 12.582l9.091 9.09a1.118 1.118 0 1 0 1.581-1.58L12.582 11l9.09-9.091a1.118 1.118 0 0 0 0-1.582z"
@@ -2130,24 +2133,25 @@
 						<img
 								class="tablet-hide desktop-hide" src="./images/popup/mobile1.jpg" alt=""></div>
 				</div>
-				<div class="slider-counter slider-counter_dark" id="transparency-popup-counter">
-					<div class="slider-counter-content">
-						<div class="slider-counter-content__current"></div>
-						<div class="slider-counter-content__total"></div>
-					</div>
+				
+			</div>
+			<div class="slider-counter slider-counter_dark" id="transparency-popup-counter">
+				<div class="slider-counter-content">
+					<div class="slider-counter-content__current"></div>
+					<div class="slider-counter-content__total"></div>
 				</div>
-				<div class="popup-arrow popup-arrow_transparency popup-arrow_transparency_left" id="transparency_left">
-					<svg width="18" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M16.543 23.205L1 12.103 16.543 1.002" stroke="#fff" stroke-opacity=".5" stroke-width="1.665"
-							  stroke-linecap="round" stroke-linejoin="round"></path>
-					</svg>
-				</div>
-				<div class="popup-arrow popup-arrow_transparency popup-arrow_transparency_right" id="transparency_right">
-					<svg width="18" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M1.458 1L17 12.102 1.458 23.204" stroke="#fff" stroke-opacity=".5" stroke-width="1.665"
-							  stroke-linecap="round" stroke-linejoin="round"></path>
-					</svg>
-				</div>
+			</div>
+			<div class="popup-arrow popup-arrow_transparency popup-arrow_transparency_left" id="transparency_left">
+				<svg width="18" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M16.543 23.205L1 12.103 16.543 1.002" stroke="#fff" stroke-opacity=".5" stroke-width="1.665"
+						  stroke-linecap="round" stroke-linejoin="round"></path>
+				</svg>
+			</div>
+			<div class="popup-arrow popup-arrow_transparency popup-arrow_transparency_right" id="transparency_right">
+				<svg width="18" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M1.458 1L17 12.102 1.458 23.204" stroke="#fff" stroke-opacity=".5" stroke-width="1.665"
+						  stroke-linecap="round" stroke-linejoin="round"></path>
+				</svg>
 			</div>
 		</div>
 	</div>
