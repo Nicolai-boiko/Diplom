@@ -55,7 +55,13 @@ const formSend = () => {
                     throw new Error('Все пропало!')
                 }
                 statusMessage.style.cssText = 'font-size: 13px; color: black;';
-                statusMessage.innerHTML = successMesage;
+                const popThx = document.querySelector('.popup-thank');
+                const closeThank = document.querySelector('.close-thank');
+                closeThank.addEventListener('click', () => {
+                    popThx.style.visibility = 'hidden'
+                })
+                popThx.style.visibility = 'visible'
+                statusMessage.innerHTML = '';
                 let inputs = form.querySelectorAll('input');
                 inputs.forEach(input => input.value = '');
             })
