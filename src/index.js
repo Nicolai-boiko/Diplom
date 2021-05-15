@@ -13,6 +13,7 @@ import documentsSlider from './modules/documentsSlider';
 import showConsultation from './modules/showConsultation';
 import reviewsSlider from './modules/reviewsSlider';
 import faqAccordion from './modules/faqAccordion';
+import fullList from './modules/fullList';
 
 
 
@@ -62,4 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //ЧаВо аккордеон
     faqAccordion();
+
+    //ЧаВо аккордеон
+    fullList();
 });
