@@ -60,53 +60,71 @@ fetch('http://localhost:3000/api/items')
 
         //Изменение услуги
         const changeBtns = document.querySelectorAll('.action-change');
-        const formChange = document.querySelector('.change-form');
-
+        
+        let target = '';
         changeBtns.forEach(btn => btn.addEventListener('click', (e) => {
-            const target = e.target.closest('.table__row').querySelector('.table__id').innerText;
-
+            target = e.target.closest('.table__row').querySelector('.table__id').innerText;
+            
             fetch(`http://localhost:3000/api/items/${target}`)
-                .then(response => response.json())
-                .then(job => {
-                    modalHeader.innerText = 'Редактировать услугу';
-                    let type = document.getElementById('type-change');
-                    let name = document.getElementById('name-change');
-                    let units = document.getElementById('units-change');
-                    let cost = document.getElementById('cost-change');
-                    type.value = job.type;
-                    name.value = job.name;
-                    units.value = job.units;
-                    cost.value = job.cost;
-                    let bodyObjChange = { 
-                        type: type.value, 
-                        name: name.value, 
-                        units: units.value,
-                        cost: cost.value,
-                      }
-                    modalChange.style.display = 'flex';
-                    formChange.addEventListener('submit', (e) => {
-                        e.preventDefault();
-                        fetch('http://localhost:3000/api/items', {
-                            method: 'PATCH',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify(bodyObjChange)
-                            })
-                    })
+            .then(response => response.json())
+            .then(job => {
+                let type = document.getElementById('type-change');
+                let name = document.getElementById('name-change');
+                let units = document.getElementById('units-change');
+                let cost = document.getElementById('cost-change');
+                type.value = job.type;
+                name.value = job.name;
+                units.value = job.units;
+                cost.value = job.cost;
+                const formChange = document.querySelector('.change-form');
+                modalChange.style.display = 'flex';
+
+                
+                const btnCloseModalChange = document.querySelector('.close-change');
+                btnCloseModalChange.addEventListener('click', () => {
+                    modalChange.style.display = 'none';
+                    target = '';
                 })
+
+                const renderChange = () => {
+                    const type = document.getElementById('type-change').value;
+                    const name = document.getElementById('name-change').value;
+                    const units = document.getElementById('units-change').value;
+                    const cost = document.getElementById('cost-change').value;
+                    let bodyObjChange = { 
+                        type, 
+                        name, 
+                        units, 
+                        cost
+                    }
+                    console.log(bodyObjChange);
+                    e.preventDefault();
+                    fetch(`http://localhost:3000/api/items/${target}`, {
+                        method: 'PATCH',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(bodyObjChange)
+                        })
+                }
+                formChange.addEventListener('submit', renderChange)
+            })
         }))
 
         //Удаление услуги
         const deleteBtns = document.querySelectorAll('.action-remove');
         deleteBtns.forEach(btn => btn.addEventListener('click', (e) => {
-
+            let targetDelete = e.target.closest('.table__row').querySelector('.table__id').innerText;
+            e.preventDefault();
+                    fetch(`http://localhost:3000/api/items/${targetDelete}`, {
+                        method: 'DELETE'
+                    })
         }))
     })
 
 //Добавление услуги
 const btnAddItem = document.querySelector('.btn-addItem');
-const btnCloseModal = document.querySelector('.button__close');
+const btnCloseModal = document.querySelector('.close-add');
 const modalHeader = document.querySelector('.modal__header');
 const modal = document.getElementById('modal-add');
 const modalChange = document.getElementById('modal-change');
@@ -126,7 +144,6 @@ btnAddItem.addEventListener('click', () => {
 
 btnCloseModal.addEventListener('click', () => {
     modal.style.display = 'none'
-    modalChange.style.display = 'none'
 })
 
 const form = document.querySelector('.add-form');

@@ -530,8 +530,16 @@ body {
 
 /*   Модальное окно   */
 
-.modal {
+#modal-add {
     display: none;
+}
+
+#modal-change {
+    display: none;
+}
+
+.modal {
+    display: flex;
     flex-direction: column;
     position: absolute;
     width: 450px;
