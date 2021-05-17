@@ -8,8 +8,6 @@ const documentsSlider = () => {
     const nextTransparencyBtn = document.querySelector('#transparency_right');
     const transparencySlides = document.querySelectorAll('.popup-transparency-slider__slide');
     const sliderContentCurrent = document.querySelectorAll('.slider-counter-content__current');
-    const sliderContentTotal = document.querySelectorAll('.slider-counter-content__total');
-    sliderContentTotal.forEach(q=> q.textContent = 3);
     allDocs.forEach((doc, i) => {
         const hoverItem = doc.querySelector('.item-hover');
         doc.addEventListener('mouseover', () => {
@@ -66,10 +64,11 @@ const documentsSlider = () => {
     if (document.documentElement.clientWidth <= 1090) {
         doDocSlider();
     }
-    window. addEventListener('resize', () => {
+    window.addEventListener('resize', () => {
         if (document.documentElement.clientWidth <= 1090) {
             doDocSlider();
         } else {
+            document.querySelector('.transparency-slider.row.glo-slider__wrap').style.cssText = 'transform: translateX(0%)';
             document.querySelectorAll('.transparency-item.glo-slider__item').forEach(item => item.classList.remove('glo-slider__item'));
         }
     }) 
