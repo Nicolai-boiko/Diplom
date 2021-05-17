@@ -369,7 +369,8 @@ body {
     margin-bottom: 10px;
 }
 
-.text-warning{
+.text-warning {
+    display: none;
     color: tomato;
 }
 
