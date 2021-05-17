@@ -530,12 +530,8 @@ body {
 
 /*   Модальное окно   */
 
-#modal {
-    display: none;
-}
-
 .modal {
-    display: flex;
+    display: none;
     flex-direction: column;
     position: absolute;
     width: 450px;
@@ -563,8 +559,6 @@ body {
     font-weight: 700;
     margin-bottom: 30px;
 }
-
-
 
 .button__close {
     position: absolute;
