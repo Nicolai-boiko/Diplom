@@ -5,13 +5,14 @@ const showToolTip = () => {
 
     elements.forEach(elem => {
         let fill = elem.querySelector('.formula-item__icon-inner');
+        if (document.documentElement.clientWidth < 1024) {
+            elem.firstElementChild.style.cssText = `visibility: visible; opacity: 1; transition: opacity 0.5s`;
+        }
         elem.addEventListener('mouseover', () => {
             let coords = elem.getBoundingClientRect();
             let top = coords.top - elem.firstElementChild.offsetHeight;
             fill.style.opacity = '1';
-            if (document.documentElement.clientWidth < 1024) {
-                elem.firstElementChild.style.cssText = `visibility: visible; opacity: 1; transition: opacity 0.5s`;
-            } else {
+            if (document.documentElement.clientWidth >= 1024) {
                 if (top < 0) {
                     elem.firstElementChild.classList.add('rotate-tooltip');
                     const row = elem.closest('.row');
