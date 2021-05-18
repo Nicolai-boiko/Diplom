@@ -51,9 +51,11 @@ fetch('http://localhost:3000/api/items')
                 tbody.innerHTML = '';
                 let filtredJobsData = jobData.filter(job => job.type === select.value);
                 filtredJobsData.forEach(job => render(job));
+                deleteJob();
             } else {
                 tbody.innerHTML = '';
                 jobData.forEach((job) => render(job))
+                deleteJob();
             }
         }
         select.addEventListener('change', sortJobs);
@@ -112,14 +114,18 @@ fetch('http://localhost:3000/api/items')
         }))
 
         //Удаление услуги
-        const deleteBtns = document.querySelectorAll('.action-remove');
-        deleteBtns.forEach(btn => btn.addEventListener('click', (e) => {
-            let targetDelete = e.target.closest('.table__row').querySelector('.table__id').innerText;
-            e.preventDefault();
-                    fetch(`http://localhost:3000/api/items/${targetDelete}`, {
-                        method: 'DELETE'
-                    })
-        }))
+        const deleteJob = () => {
+            const deleteBtns = document.querySelectorAll('.action-remove');
+            deleteBtns.forEach(btn => btn.addEventListener('click', (e) => {
+                let targetDelete = e.target.closest('.table__row').querySelector('.table__id').innerText;
+                e.preventDefault();
+                        fetch(`http://localhost:3000/api/items/${targetDelete}`, {
+                            method: 'DELETE'
+                        })
+            }))
+        }
+        deleteJob();
+        
     })
 
 //Добавление услуги
@@ -175,6 +181,7 @@ form.addEventListener('submit', (e) => {
             select.value = 'Все услуги';
             tbody.innerHTML = '';
             jobData.forEach((job) => render(job))
+            deleteJob();
         })
             
     modal.style.display = 'none'

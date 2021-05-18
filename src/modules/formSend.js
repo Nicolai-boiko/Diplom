@@ -57,11 +57,16 @@ const formSend = () => {
                 statusMessage.style.cssText = 'font-size: 13px; color: black;';
                 const popThx = document.querySelector('.popup-thank');
                 const closeThank = document.querySelector('.close-thank');
+                const popCons = document.querySelector('.popup-consultation');
                 closeThank.addEventListener('click', () => {
                     popThx.style.visibility = 'hidden'
                 })
                 popThx.style.visibility = 'visible'
                 statusMessage.innerHTML = '';
+                setTimeout(() => {                 
+                    popThx.style.visibility = 'hidden';
+                    popCons.style.visibility = 'hidden';
+                }, 1500)
                 let inputs = form.querySelectorAll('input');
                 inputs.forEach(input => input.value = '');
             })

@@ -2,7 +2,8 @@ const faqAccordion = () => {
     const accordion = document.querySelectorAll('.title_block');
     accordion.forEach(acc => {
         acc.addEventListener('click', () => {
-            acc.classList.toggle('msg-active')
+            accordion.forEach(acc => acc.classList.remove('msg-active'))
+            acc.classList.add('msg-active')
         })
     })
 }

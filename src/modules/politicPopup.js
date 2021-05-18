@@ -9,6 +9,12 @@ const politicPopup = () => {
     closeBtn.addEventListener('click', () => {
         popup.style.visibility = 'hidden';
     })
+    const popupAll = document.querySelectorAll('.popup');
+    popupAll.forEach(pop => pop.addEventListener('click', (e) => {
+        if (e.target.matches('.popup')) {
+            popupAll.forEach(pop => pop.style.visibility = 'hidden');
+        }
+    }))
 }
 
 export default politicPopup;

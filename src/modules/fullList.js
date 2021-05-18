@@ -69,7 +69,7 @@ const fullList = () => {
                 `;
                 btnsContainer.append(crBtn);
             })
-            
+            document.querySelector('.popup-repair-types-nav__item').classList.add('active');
             if (document.documentElement.clientWidth <= 1024) {
                 doJobSlider();
             }
@@ -110,6 +110,8 @@ const fullList = () => {
                 })
             const navButtons = document.querySelectorAll('.popup-repair-types-nav__item');
             navButtons.forEach(btn => btn.addEventListener('click', () => {
+                navButtons.forEach(btn => btn.classList.remove('active'));
+                btn.classList.add('active');
                 matchedJobs = jobData.filter(job => job.type === btn.innerText);
                 const headTitle = document.querySelector('.popup-repair-types-content__head-title');
                 const table = document.querySelector('.popup-repair-types-content-table__list > tbody');
