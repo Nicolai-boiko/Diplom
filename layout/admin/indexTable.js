@@ -4,8 +4,17 @@ if(document.cookie === '') {
     document.location.href = '../admin';
 }
 
-//Загрузка данных
+const btnAddItem = document.querySelector('.btn-addItem');
+const btnCloseModal = document.querySelector('.close-add');
+const modalHeader = document.querySelector('.modal__header');
+const modal = document.getElementById('modal-add');
+const modalChange = document.getElementById('modal-change');
+const form = document.querySelector('.add-form');
+const select = document.getElementById('typeItem');
+const tbody = document.getElementById('tbody');
 
+
+//Загрузка данных
 let jobData;
 const render = (item) => {
     const crTr = document.createElement('tr');
@@ -34,106 +43,126 @@ const deleteJob = () => {
     deleteBtns.forEach(btn => btn.addEventListener('click', (e) => {
         let targetDelete = e.target.closest('.table__row').querySelector('.table__id').innerText;
         e.preventDefault();
-                fetch(`http://localhost:3000/api/items/${targetDelete}`, {
-                    method: 'DELETE'
+        fetch(`http://localhost:3000/api/items/${targetDelete}`, {
+            method: 'DELETE'
+        }).then(skip => fetch('http://localhost:3000/api/items'))
+                .then(response => response.json())
+                .then(data => {
+                    tbody.innerHTML = '';
+                    data.forEach(job => render(job))
+                    deleteJob();
+                    changeList();
+                    select.innerHTML = '';
+                    createList(data);
                 })
     }))
 }
+//Создание списка услуг
+const createList = (data) => {
+    let typeOfJobs = new Set(data.map(job => job.type));
+    typeOfJobs.forEach(type => {
+        const crOption = document.createElement('option');
+        crOption.setAttribute('value', `${type}`);
+        crOption.innerHTML =`
+            ${type}
+        `;
+        select.append(crOption)
+    })
+}
+//Измененеие услуги
+const changeList = () => {
+    const changeBtns = document.querySelectorAll('.action-change');
+        
+    let target = '';
+    changeBtns.forEach(btn => btn.addEventListener('click', (e) => {
+        target = e.target.closest('.table__row').querySelector('.table__id').innerText;
+        
+        fetch(`http://localhost:3000/api/items/${target}`)
+        .then(response => response.json())
+        .then(job => {
+            let type = document.getElementById('type-change');
+            let name = document.getElementById('name-change');
+            let units = document.getElementById('units-change');
+            let cost = document.getElementById('cost-change');
+            type.value = job.type;
+            name.value = job.name;
+            units.value = job.units;
+            cost.value = job.cost;
+            const formChange = document.querySelector('.change-form');
+            modalChange.style.display = 'flex';
+
+            
+            const btnCloseModalChange = document.querySelector('.close-change');
+            btnCloseModalChange.addEventListener('click', () => {
+                modalChange.style.display = 'none';
+                target = '';
+            })
+
+            formChange.addEventListener('submit',  (e) => {
+                const type = document.getElementById('type-change').value;
+                const name = document.getElementById('name-change').value;
+                const units = document.getElementById('units-change').value;
+                const cost = document.getElementById('cost-change').value;
+                let bodyObjChange = { 
+                    type, 
+                    name, 
+                    units, 
+                    cost
+                }
+                e.preventDefault();
+                fetch(`http://localhost:3000/api/items/${target}`, {
+                    method: 'PATCH',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(bodyObjChange)
+                    }).then(skip => fetch('http://localhost:3000/api/items'))
+                            .then(response => response.json())
+                            .then(data => {
+                                tbody.innerHTML = '';
+                                data.forEach(job => render(job))
+                                deleteJob();
+                                changeList();
+                                select.innerHTML = '';
+                                createList(data);
+                                modalChange.style.display = 'none'
+                            })
+            })
+        })
+    }))
+}
+
+
 //Получение данных
 fetch('http://localhost:3000/api/items')
     .then(response => response.json())
     .then(data => {
         jobData = data;
         //Создание списка услуг
-        let typeOfJobs = new Set(jobData.map(job => job.type));
-        const select = document.getElementById('typeItem');
-        typeOfJobs.forEach(type => {
-            const crOption = document.createElement('option');
-            crOption.setAttribute('value', `${type}`);
-            crOption.innerHTML =`
-                ${type}
-            `;
-            select.append(crOption)
-        })
+        createList(data);
         //Создание таблицы услуг
         const tbody = document.getElementById('tbody');
         jobData.forEach(job => render(job))
-
+        deleteJob();
+        changeList();
         function sortJobs(){
             if (select.value !== 'Все услуги'){
                 tbody.innerHTML = '';
                 let filtredJobsData = jobData.filter(job => job.type === select.value);
                 filtredJobsData.forEach(job => render(job));
                 deleteJob();
+                changeList();
             } else {
                 tbody.innerHTML = '';
                 jobData.forEach((job) => render(job))
                 deleteJob();
+                changeList();
             }
         }
         select.addEventListener('change', sortJobs);
-
-        //Изменение услуги
-        const changeBtns = document.querySelectorAll('.action-change');
-        
-        let target = '';
-        changeBtns.forEach(btn => btn.addEventListener('click', (e) => {
-            target = e.target.closest('.table__row').querySelector('.table__id').innerText;
-            
-            fetch(`http://localhost:3000/api/items/${target}`)
-            .then(response => response.json())
-            .then(job => {
-                let type = document.getElementById('type-change');
-                let name = document.getElementById('name-change');
-                let units = document.getElementById('units-change');
-                let cost = document.getElementById('cost-change');
-                type.value = job.type;
-                name.value = job.name;
-                units.value = job.units;
-                cost.value = job.cost;
-                const formChange = document.querySelector('.change-form');
-                modalChange.style.display = 'flex';
-
-                
-                const btnCloseModalChange = document.querySelector('.close-change');
-                btnCloseModalChange.addEventListener('click', () => {
-                    modalChange.style.display = 'none';
-                    target = '';
-                })
-
-                const renderChange = () => {
-                    const type = document.getElementById('type-change').value;
-                    const name = document.getElementById('name-change').value;
-                    const units = document.getElementById('units-change').value;
-                    const cost = document.getElementById('cost-change').value;
-                    let bodyObjChange = { 
-                        type, 
-                        name, 
-                        units, 
-                        cost
-                    }
-                    console.log(bodyObjChange);
-                    e.preventDefault();
-                    fetch(`http://localhost:3000/api/items/${target}`, {
-                        method: 'PATCH',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(bodyObjChange)
-                        })
-                }
-                formChange.addEventListener('submit', renderChange)
-            })
-        }))
-        deleteJob();
     })
 
 //Добавление услуги
-const btnAddItem = document.querySelector('.btn-addItem');
-const btnCloseModal = document.querySelector('.close-add');
-const modalHeader = document.querySelector('.modal__header');
-const modal = document.getElementById('modal-add');
-const modalChange = document.getElementById('modal-change');
 
 btnAddItem.addEventListener('click', () => {
     modal.style.display = 'flex'
@@ -152,8 +181,6 @@ btnCloseModal.addEventListener('click', () => {
     modal.style.display = 'none'
 })
 
-const form = document.querySelector('.add-form');
-const select = document.getElementById('typeItem');
 
 form.addEventListener('submit', (e) => {
     const type = document.getElementById('type').value;
@@ -180,8 +207,11 @@ form.addEventListener('submit', (e) => {
             jobData = data;
             select.value = 'Все услуги';
             tbody.innerHTML = '';
-            jobData.forEach((job) => render(job))
+            jobData.forEach((job) => render(job));
             deleteJob();
+            changeList();
+            select.innerHTML = '';
+            createList(data);
         })
             
     modal.style.display = 'none'
